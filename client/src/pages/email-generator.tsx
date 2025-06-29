@@ -40,27 +40,24 @@ export default function EmailGenerator() {
                     <span>Generador</span>
                   </button>
                 </Link>
-                <button 
-                  onClick={() => alert("Panel de clientes próximamente")}
-                  className="flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium text-warm-gray hover:text-navy hover:bg-gray-100 transition-colors"
-                >
-                  <Users className="h-4 w-4" />
-                  <span>Clientes</span>
-                </button>
-                <button 
-                  onClick={() => alert("Panel de productos próximamente")}
-                  className="flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium text-warm-gray hover:text-navy hover:bg-gray-100 transition-colors"
-                >
-                  <Package className="h-4 w-4" />
-                  <span>Productos</span>
-                </button>
-                <button 
-                  onClick={() => alert("Panel de copywriters próximamente")}
-                  className="flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium text-warm-gray hover:text-navy hover:bg-gray-100 transition-colors"
-                >
-                  <PenTool className="h-4 w-4" />
-                  <span>Copywriters</span>
-                </button>
+                <Link href="/clients">
+                  <button className="flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium text-warm-gray hover:text-navy hover:bg-gray-100 transition-colors">
+                    <Users className="h-4 w-4" />
+                    <span>Clientes</span>
+                  </button>
+                </Link>
+                <Link href="/products">
+                  <button className="flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium text-warm-gray hover:text-navy hover:bg-gray-100 transition-colors">
+                    <Package className="h-4 w-4" />
+                    <span>Productos</span>
+                  </button>
+                </Link>
+                <Link href="/copywriters">
+                  <button className="flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium text-warm-gray hover:text-navy hover:bg-gray-100 transition-colors">
+                    <PenTool className="h-4 w-4" />
+                    <span>Copywriters</span>
+                  </button>
+                </Link>
               </nav>
               <div className="flex items-center space-x-2 text-sm text-warm-gray border-l border-gray-300 pl-4">
                 <Sparkles className="text-gold h-4 w-4" />
