@@ -45,11 +45,11 @@ export async function setupVite(app: Express, server: Server) {
     const url = req.originalUrl;
 
     try {
-      const clientTemplate = path.resolve(
-        import.meta.dirname,
-        "..",
-        "index.html",
-      );
+      const clientRoot = path.resolve(import.meta.dirname, "..", "client");
+      const publicIndex = path.resolve(clientRoot, "public", "index.html");
+      const clientTemplate = fs.existsSync(publicIndex)
+        ? publicIndex
+        : path.resolve(clientRoot, "index.html");
 
       // always reload the index.html file from disk incase it changes
       let template = await fs.promises.readFile(clientTemplate, "utf-8");
